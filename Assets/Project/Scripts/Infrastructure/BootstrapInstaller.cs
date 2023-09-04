@@ -8,7 +8,6 @@ namespace Project.GameAssets
         public override void InstallBindings()
         {
             Container.Install<CommandsInstaller>();
-            Container.BindInterfacesTo<BootstrapState>();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using GameStateMachine.Project.Scripts.Modules.GameStateMachine;
+using Zenject;
 
 namespace Project.GameAssets
 {
@@ -6,6 +7,7 @@ namespace Project.GameAssets
     {
         public override void InstallBindings()
         {
+            Container.Install<GameStateMachineInstaller>();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Project.GameAssets.Core
     {
         public override void InstallBindings()
         {
-            Container.BindInterfacesTo<EcsManager>().AsSingle();
+            Container.BindInterfacesTo<CoreEcsManager>().AsSingle();
         }
     }
 }

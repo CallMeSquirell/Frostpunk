@@ -1,19 +1,22 @@
-using UnityEngine.AddressableAssets;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 
 namespace Project.GameAssets.Commands
 {
     public interface ILocationModel
     {
-        AssetReference SceneAsset { get; }
+        UniTask Initialize(CancellationToken cancellationToken);
     }
 
     public class LocationModel : ILocationModel
     {
-        public AssetReference SceneAsset { get; }
-        
-        public LocationModel(LocationConfig config)
+        protected LocationModel(string path)
         {
-            SceneAsset = config.Scene;
+        }
+
+        public UniTask Initialize(CancellationToken cancellationToken)
+        {
+            return UniTask.CompletedTask;
         }
     }
 }

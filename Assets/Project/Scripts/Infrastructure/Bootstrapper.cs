@@ -1,5 +1,5 @@
-﻿using Commands.Project.Scripts.Modules.Commands.Core.Impl;
-using Project.GameAssets.Commands;
+﻿using GameStateMachine.Project.Scripts.Modules.GameStateMachine;
+using Project.Scripts.Core;
 using UnityEngine;
 using Zenject;
 
@@ -9,12 +9,11 @@ namespace Project.GameAssets
     {
         [SerializeField]
         private SceneContext _sceneContext;
-        
+
         private void Start()
         {
             var container = _sceneContext.Container;
-            var 
-            container.Resolve<CommandExecutor>().Execute<IGoLocationCommand>(ApplicationContext.Token);
+            container.Resolve<IGameStateMachine>().Enter<CoreState>();
         }
     }
 }

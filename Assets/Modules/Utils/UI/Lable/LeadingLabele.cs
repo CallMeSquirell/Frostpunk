@@ -1,5 +1,4 @@
 using UnityEngine;
-using Utils.Project.Scripts.Modules.Utils.Extensions;
 using Utils.Project.Scripts.Modules.Utils.Pool;
 
 namespace Utils.Project.Scripts.Modules.Utils.UI.Lable
@@ -25,7 +24,7 @@ namespace Utils.Project.Scripts.Modules.Utils.UI.Lable
 
         private void Update()
         {
-            if (_target.NonNull())
+            if (_target != null)
             {
                 SelfTransform.position = _camera.WorldToScreenPoint(_target.position) + _offset;
             }

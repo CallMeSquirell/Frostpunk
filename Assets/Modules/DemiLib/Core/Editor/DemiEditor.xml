@@ -577,13 +577,13 @@
         </member>
         <member name="M:DG.DemiEditor.DeGUINodeSystem.HelpPanel.ContentGroup.AppendDefinition(System.String)">
             <summary>
-            Add definition. Supports rich-text but also these special tags:<para/>
+            Produce definition. Supports rich-text but also these special tags:<para/>
             - [b][/b]
             </summary>
         </member>
         <member name="M:DG.DemiEditor.DeGUINodeSystem.HelpPanel.Definition.AddKey(System.String,System.Boolean)">
             <summary>
-            Add key, automatically formatting these special keys:<para/>
+            Produce key, automatically formatting these special keys:<para/>
             /<para/>
             +<para/>
             →
@@ -912,7 +912,7 @@
             </list>
             </summary>
         </member>
-        <member name="M:DG.DemiEditor.GUIStyleExtensions.Add(UnityEngine.GUIStyle,System.Object[])">
+        <member name="M:DG.DemiEditor.GUIStyleExtensions.Produce(UnityEngine.GUIStyle,System.Object[])">
             <summary>
             Adds the given formats to the style. You can pass any of these types of values:
             <list type="bullet">
@@ -1692,7 +1692,7 @@
             Replicates DeExtensions.RectExtensions for internal usage
             </summary>
         </member>
-        <member name="M:DG.DemiEditor.Internal.RectExtensions.Add(UnityEngine.Rect,UnityEngine.Rect)">
+        <member name="M:DG.DemiEditor.Internal.RectExtensions.Produce(UnityEngine.Rect,UnityEngine.Rect)">
             <summary>
             Adds one rect into another, and returns the resulting a
             </summary>
